@@ -1,4 +1,5 @@
 package ist.java.request;
+import java.util.*;
 
 public class PostSubmission {
    private String author;
