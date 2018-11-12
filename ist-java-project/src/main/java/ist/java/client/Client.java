@@ -1,5 +1,6 @@
 package ist.java.client;
-
+import ist.java.request.PostSubmission;
+import java.util.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -31,12 +32,14 @@ public class Client {
             System.out.println("What do you want to talk about ? (120 characters)");
             System.out.println();   	
             String tweet = System.in.read(); 
+	Date timestamp =Calendar.getInstance().getTime(); 
 
             System.out.println("send post: ");
-            System.out.println("timestamp " );
+            System.out.println("timestamp \"" + timestamp +"\"");
             System.out.println("author: \"" + author +"\"");
             System.out.println("tweet: \"" + tweet +"\"");
-
+	 PostSubmission user = new PostSubmission(author, tweet, timestamp);
+		
             //wrapping in a PostSubmission class before sending to the network
             } else{
             	//handling if it is a request
