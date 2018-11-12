@@ -1,5 +1,6 @@
 package ist.java.server;
-
+import ist.java.request.PostRequest;
+import ist.java.request.PostSubmission;
 import ist.java.data.Blog;
 import java.io.*;
 import java.net.*;
@@ -17,7 +18,15 @@ public class BlogServer {
     public static void main(String... args){
 		BlogServer newServer = new BlogServer();			// Creates an object 'newServer', which will later hold all connections (?)
 		newServer.startRunning();							// Start running 'server'. 
+	if(user instanceof PostRequest){
+
+		}else if(user instanceof PostSubmission){
+
+		}
+
 	}	
+    }
+	
 
 	// setup of server
 	public void startRunning(){
