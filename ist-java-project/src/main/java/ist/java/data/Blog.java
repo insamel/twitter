@@ -42,9 +42,8 @@ public class Blog implements Readable, Writable{
     }
 
 //save() rewrites the whole file, erasing previous data
- void save() throws IOException{
+ 	void save() throws IOException{
 
-     
- }
+ 	}
 
 }
