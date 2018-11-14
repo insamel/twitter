@@ -1,0 +1,33 @@
+public List<AbstractPost> readAll() throws IOException {
+
+        List<AbstractPost> allTweets = new List<AbstractPost>();
+
+        for(ListIterator<AbstractPost> it = tweets.ListIterator(); it.hasNext();){
+            allTweets.add(it.next());
+        }
+
+        if(allTweets.readOne()!=null){
+            return allTweets<>; //return of list right?
+        }else{
+            return null;
+        }
+        
+    }
+    
+    public List<AbstractPost> readOwnPost() throws IOException{
+    List<AbstractPost> ownTweets = new List<AbstractPost>();
+
+        for(ListIterator<AbstractPost> it = tweets.ListIterator(); it.hasNext();){
+            AbstractPost post = it.next();
+
+            //if(post.getAuthor() == this.author???)
+            ownTweets.add(post);
+        }
+
+        if(ownTweets.readOne()!=null){
+            return ownTweets<AbstractPost>; //return of list right?
+        }else{
+            return null;
+        }
+        
+    }
